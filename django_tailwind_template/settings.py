@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
+    'django_browser_reload',
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -125,3 +126,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django BrowserReload settings
+# ------------------------------------------------------------------------------
+# https://github.com/django-browser-reload/django-browser-reload
+INTERNAL_IPS = [
+    "127.0.0.1",  # Add your local IP address here
+]
+BROWSER_RELOAD_IMPORT_STRINGS = [
+    "django_browser_reload.utils.get_modules",
+]
+BROWSER_RELOAD_LIVE_RELOAD = True
+BROWSER_RELOAD_LIVE_RELOAD_IGNORE = [
+    r"static/.*",
+    r"media/.*",
+]
