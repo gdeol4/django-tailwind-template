@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="bg-white shadow-xl border rounded-lg p-6">
-    <h2 class="text-xl font-bold mb-2">Molecule Image</h2>
-    <img src="data:image/svg+xml;base64,{{ molecule_image }}" alt="Molecule" class="w-full">
-    <p class="mt-4">SMILES: {{ smiles_string }}</p>
+<div>
+    {% include 'dash/molecule_card.html' %}
 </div>
 <div class="bg-white shadow-xl border rounded-lg p-6">
     <h2 class="text-xl font-bold mb-2">Box 2</h2>
