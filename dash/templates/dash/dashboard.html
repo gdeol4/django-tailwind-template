@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-white shadow-xl border rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-2">Molecule Image</h2>
+    <img src="data:image/svg+xml;base64,{{ molecule_image }}" alt="Molecule" class="w-full">
+    <p class="mt-4">SMILES: {{ smiles_string }}</p>
+</div>
+<div class="bg-white shadow-xl border rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-2">Box 2</h2>
+    <p>This is the content of box 2.</p>
+</div>
+<div class="bg-white shadow-xl border rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-2">Box 3</h2>
+    <p>This is the content of box 3.</p>
+</div>
+<div class="bg-white shadow-xl border rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-2">Box 4</h2>
+    <p>This is the content of box 4.</p>
+</div>
+{% endblock %}
